@@ -1,0 +1,15 @@
+version: '3'
+services:
+  backend:
+    build: ./app
+    container_name: mnist_backend
+    ports:
+      - "5000:5000"
+    restart: always
+
+  frontend:
+    build: ./frontend
+    container_name: my_frontend
+    ports:
+      - "3000:80"
+    restart: always
